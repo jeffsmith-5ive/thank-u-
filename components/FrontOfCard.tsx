@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SteelpanIcon } from './Icons';
+import { CakeIcon } from './Icons';
 
 interface FrontOfCardProps {
   onFlip: () => void;
@@ -13,15 +13,15 @@ export const FrontOfCard: React.FC<FrontOfCardProps> = ({ onFlip }) => {
       onClick={onFlip}
     >
       <div className="relative w-full h-full border-4 border-white/80 rounded-lg flex flex-col items-center justify-center text-center p-4">
-        <div className="absolute -top-4 -left-4 text-teal-700 opacity-80">
-          <SteelpanIcon className="w-16 h-16" />
+        <div className="absolute -top-4 -left-4 text-rose-500 opacity-80">
+          <CakeIcon className="w-16 h-16" />
         </div>
 
         <h1 className="font-poppins font-black text-6xl md:text-7xl text-teal-800 drop-shadow-lg leading-tight">
-          Big up &<br />Blessings!
+          Happy<br />Birthday
         </h1>
-        <p className="font-poppins font-bold text-xl text-rose-600 mt-4 drop-shadow">
-          Real talk—yuh does hold it down!
+        <p className="font-poppins font-bold text-4xl text-rose-600 mt-4 drop-shadow">
+          Gitanjali!
         </p>
 
         <div className="mt-auto bg-white/50 rounded-full px-6 py-2">

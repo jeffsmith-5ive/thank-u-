@@ -12,15 +12,15 @@ export const HummingbirdIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) 
   </svg>
 );
 
-export const SteelpanIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    {...props}
-  >
-    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-    <circle cx="12" cy="12" r="2" />
-    <path d="M12 5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM7 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
-  </svg>
+export const CakeIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 24 24" 
+      fill="currentColor"
+      {...props}
+    >
+      <path d="M12.0001 7.2L13.0001 4.5L14.4001 5.9L15.0001 3.5C15.0001 3.5 15.2001 2.5 14.0001 2.5C12.8001 2.5 12.0001 4 12.0001 4C12.0001 4 11.2001 2.5 10.0001 2.5C8.8001 2.5 9.0001 3.5 9.0001 3.5L9.6001 5.9L11.0001 4.5L12.0001 7.2Z"/>
+      <path d="M21 12V11C21 10.4 20.6 10 20 10H4C3.4 10 3 10.4 3 11V12C3 12.6 3.4 13 4 13H5V20C5 20.6 5.4 21 6 21H18C18.6 21 19 20.6 19 20V13H20C20.6 13 21 12.6 21 12ZM17 19H7V13H17V19Z"/>
+      <path d="M9 15H15V17H9V15Z"/>
+    </svg>
 );

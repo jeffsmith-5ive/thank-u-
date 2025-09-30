@@ -4,27 +4,19 @@ import { FrontOfCard } from './components/FrontOfCard';
 import { InsideOfCard } from './components/InsideOfCard';
 import { BackOfCard } from './components/BackOfCard';
 import { HummingbirdIcon } from './components/Icons';
-import { NameEntry } from './components/NameEntry';
 
 const App: React.FC = () => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [recipientName, setRecipientName] = useState<string | null>(null);
 
   const handleFlip = useCallback(() => {
     setIsFlipped(prev => !prev);
   }, []);
 
-  const handleNameSubmit = (name: string) => {
-    setRecipientName(name);
-  };
-
   return (
     <main className="min-h-screen w-full bg-gradient-to-br from-teal-100 via-yellow-50 to-rose-100 flex flex-col items-center justify-center p-4 overflow-hidden relative">
       <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
-      
-      {!recipientName && <NameEntry onSubmit={handleNameSubmit} />}
 
-      <div className={`relative z-10 w-full flex flex-col items-center justify-center transition-all duration-500 ${!recipientName ? 'blur-sm pointer-events-none' : 'blur-none'}`}>
+      <div className="relative z-10 w-full flex flex-col items-center justify-center">
         <div style={{ perspective: '1200px' }} className="w-full max-w-lg h-[600px] mb-8">
           <div
             className={`relative w-full h-full transition-transform duration-700 ease-in-out`}
@@ -34,7 +26,7 @@ const App: React.FC = () => {
               <FrontOfCard onFlip={handleFlip} />
             </div>
             <div className="absolute w-full h-full" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
-              <InsideOfCard onFlip={handleFlip} recipientName={recipientName || ''} />
+              <InsideOfCard onFlip={handleFlip} recipientName="Gitanjali" />
             </div>
           </div>
         </div>

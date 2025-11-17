@@ -4,9 +4,10 @@ import { CakeIcon } from './Icons';
 
 interface FrontOfCardProps {
   onFlip: () => void;
+  recipientName: string;
 }
 
-export const FrontOfCard: React.FC<FrontOfCardProps> = ({ onFlip }) => {
+export const FrontOfCard: React.FC<FrontOfCardProps> = ({ onFlip, recipientName }) => {
   return (
     <div
       className="w-full h-full rounded-2xl bg-gradient-to-br from-yellow-300 to-amber-400 p-8 flex flex-col items-center justify-center cursor-pointer shadow-2xl hover:shadow-yellow-400/50 transition-shadow duration-300 group"
@@ -21,7 +22,7 @@ export const FrontOfCard: React.FC<FrontOfCardProps> = ({ onFlip }) => {
           Happy<br />Birthday
         </h1>
         <p className="font-poppins font-bold text-4xl text-rose-600 mt-4 drop-shadow">
-          Gitanjali!
+          {recipientName}!
         </p>
 
         <div className="mt-auto bg-white/50 rounded-full px-6 py-2">

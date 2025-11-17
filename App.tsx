@@ -7,6 +7,7 @@ import { HummingbirdIcon } from './components/Icons';
 
 const App: React.FC = () => {
   const [isFlipped, setIsFlipped] = useState(false);
+  const recipientName = "Satesh";
 
   const handleFlip = useCallback(() => {
     setIsFlipped(prev => !prev);
@@ -23,10 +24,10 @@ const App: React.FC = () => {
             style={{ transformStyle: 'preserve-3d', transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
           >
             <div className="absolute w-full h-full" style={{ backfaceVisibility: 'hidden' }}>
-              <FrontOfCard onFlip={handleFlip} />
+              <FrontOfCard onFlip={handleFlip} recipientName={recipientName} />
             </div>
             <div className="absolute w-full h-full" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
-              <InsideOfCard onFlip={handleFlip} recipientName="Gitanjali" />
+              <InsideOfCard onFlip={handleFlip} recipientName={recipientName} />
             </div>
           </div>
         </div>

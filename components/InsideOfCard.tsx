@@ -7,24 +7,25 @@ interface InsideOfCardProps {
 }
 
 export const InsideOfCard: React.FC<InsideOfCardProps> = ({ onFlip, recipientName }) => {
+    const messageParagraphs = [
+        "You ain’t just a friend — you’s my real day-one, my ride-or-die, my partner-in-crime from long time. We handle bacchanal, blessings, pressure, and pure vibes together, and we always bounce back like two seasoned Trinis who know the game.",
+        "Thanks for all the years of fun and memories — and cheers to even more fun, more madness, and more legendary moments ahead. So… that’s 19 slap or wha? 🎉😂",
+        "More life, more guidance, more success. Enjoy yuh day to de max, mih brother."
+    ];
+
   return (
     <div className="w-full h-full rounded-2xl bg-white p-8 flex flex-col justify-between shadow-2xl">
       <div className="overflow-y-auto pr-2 text-center flex-grow flex flex-col justify-center">
-        <h2 className="text-3xl text-gray-800 mb-4 font-poppins font-bold">
-          🎉 Happy Birthday, Gita! 🎉
-        </h2>
-        <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-          To the funniest, most dramatic, and lowkey crashout queen — yet somehow always stealing the show with your charm 😌✨
-        </p>
-        <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-          Life’s never dull when you’re around — it’s giving main character energy 24/7. Keep being the chaotic good we all need and never lose that spark that makes you you. 💅🔥
-        </p>
-        <p className="text-lg text-gray-700 mt-6 mb-4 font-semibold">
-          Much love & plenty vibes today 💖🎂💃
-        </p>
-        <p className="text-lg text-gray-700 font-semibold">
-          — Jeff 💫
-        </p>
+          <>
+            <h2 className="text-3xl text-gray-800 mb-4 font-poppins font-bold">
+              🎉 Happy Birthday, {recipientName}! 🎉
+            </h2>
+            {messageParagraphs.map((paragraph, index) => (
+                <p key={index} className="text-lg text-gray-700 mb-4 leading-relaxed">
+                    {paragraph}
+                </p>
+            ))}
+          </>
       </div>
       <button
         onClick={onFlip}

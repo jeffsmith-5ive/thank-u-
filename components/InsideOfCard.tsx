@@ -8,9 +8,13 @@ interface InsideOfCardProps {
 
 export const InsideOfCard: React.FC<InsideOfCardProps> = ({ onFlip, recipientName }) => {
     const messageParagraphs = [
-        "You ain’t just a friend — you’s my real day-one, my ride-or-die, my partner-in-crime from long time. We handle bacchanal, blessings, pressure, and pure vibes together, and we always bounce back like two seasoned Trinis who know the game.",
-        "Thanks for all the years of fun and memories — and cheers to even more fun, more madness, and more legendary moments ahead. So… that’s 19 slap or wha? 🎉😂",
-        "More life, more guidance, more success. Enjoy yuh day to de max, mih brother."
+        "Wishing you a day overflowing with joy, love, and zero stress — because if anybody in this building earn a soft day, is you.",
+        "You’re the certified early bird of CTS: always first in the office, bright-eyed, ready before the lights even warm up. While the rest of us still negotiating with our alarm clocks, you done reach, settle in, and halfway through your morning routine. Operational excellence at its finest.",
+        "And listen — we can’t forget the classic Rianna trademarks: the lil hand shaking when she multitasking, the unexpected lil “buff-up” when the day running hot, and then right after, the sweetest smile like nothing ever happen. That’s the signature CTS flavor right there. Pure authenticity.",
+        "But real talk — your kindness is what stands out most. You’re patient, caring, and always willing to help, even when your workload heavier than HSB’s syllabus. You make the space warmer, the vibes brighter, and the people better.",
+        "Thank you for your hard work, your heart, and your impact. CTS running smoother because of you.",
+        "Here’s to another year of blessings, growth, laughter, and showing everybody how a real early-morning professional does it.",
+        "Enjoy your special day to the max, Ms. Rianna — you truly deserve it. 🌸🎂✨"
     ];
 
   return (
@@ -25,6 +29,11 @@ export const InsideOfCard: React.FC<InsideOfCardProps> = ({ onFlip, recipientNam
                     {paragraph}
                 </p>
             ))}
+            <div className="mt-6 pt-4 border-t-2 border-teal-50">
+                <p className="text-xl text-teal-700 font-bold italic">
+                    From Liam and Jaden
+                </p>
+            </div>
           </>
       </div>
       <button

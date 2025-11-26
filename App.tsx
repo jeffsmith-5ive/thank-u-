@@ -7,7 +7,7 @@ import { HummingbirdIcon } from './components/Icons';
 
 const App: React.FC = () => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const recipientName = "Satesh";
+  const recipientName = "Ms. Rianna";
 
   const handleFlip = useCallback(() => {
     setIsFlipped(prev => !prev);
